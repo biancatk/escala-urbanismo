@@ -1,228 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Escala urbanismo</title>
+  <meta charset="UTF-8">
+  <title>Escala Urbanismo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --verde: #6F7F3A;
-  --verde-escuro: #5A6930;
-  --offwhite: #F6F4EE;
-  --grafite: #2B2B2B;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f3ef;
+      color: #2f2f2f;
+    }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--offwhite);
-  color: var(--grafite);
-}
+    header {
+      background-color: #6f7754;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
 
-/* HEADER */
+    .logo {
+      font-weight: 500;
+      letter-spacing: 2px;
+      font-size: 18px;
+    }
 
-header {
-  position: absolute;
-  width: 100%;
-  padding: 25px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 15px;
+    }
 
-.logo {
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  letter-spacing: 2px;
-}
+    .btn-header {
+      background-color: #a3a98c;
+      padding: 10px 18px;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-.logo span {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: lowercase;
-}
+    .hero {
+      background: linear-gradient(to right, rgba(245,243,239,0.95) 35%, rgba(245,243,239,0.3)),
+      url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=2000') center/cover no-repeat;
+      padding: 120px 8%;
+    }
 
-nav a {
-  color: white;
-  margin-left: 30px;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      line-height: 1.2;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
 
-/* HERO */
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 500px;
+      color: #555;
+    }
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url("https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070") center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-}
+    .btn-primary {
+      background-color: #6f7754;
+      padding: 14px 28px;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      display: inline-block;
+    }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  max-width: 800px;
-  font-weight: 500;
-  line-height: 1.2;
-}
+    .section {
+      padding: 100px 8%;
+      text-align: center;
+    }
 
-.hero p {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 300;
-}
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
 
-/* SECTIONS */
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
 
-.section {
-  padding: 120px 10%;
-  text-align: center;
-}
+    .about-grid {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 8%;
+    }
 
-.section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: var(--verde-escuro);
-}
+    .about-grid img {
+      width: 450px;
+      border-radius: 16px;
+    }
 
-.section p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 17px;
-  line-height: 1.7;
-}
+    .about-text {
+      max-width: 500px;
+    }
 
-/* SERVICES */
+    .about-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-.services {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 60px;
-  flex-wrap: wrap;
-}
+    .about-text ul {
+      list-style: none;
+      margin-top: 20px;
+    }
 
-.service-item {
-  max-width: 250px;
-}
+    .about-text li {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
 
-.service-item h3 {
-  margin-bottom: 15px;
-  color: var(--verde);
-}
+    .about-text li::before {
+      content: "✔ ";
+      color: #6f7754;
+      font-weight: bold;
+    }
 
-/* CTA */
+    @media (max-width: 900px) {
+      .about-grid {
+        flex-direction: column;
+        text-align: center;
+      }
 
-.cta {
-  background: var(--verde);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.cta h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-}
-
-.cta button {
-  margin-top: 30px;
-  padding: 14px 35px;
-  background: white;
-  color: var(--verde);
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  letter-spacing: 1px;
-}
-
-/* FOOTER */
-
-footer {
-  background: var(--verde-escuro);
-  color: white;
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-}
-
-</style>
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    ESCALA
-    <span>urbanismo</span>
-  </div>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">ESCALA urbanismo</div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Projetos</a>
+      <a href="#">Contato</a>
+    </nav>
+    <a href="#" class="btn-header">ENTRE EM CONTATO</a>
+  </header>
 
-<section class="hero">
-  <div>
-    <h1>Desenho urbano com precisão técnica e sensibilidade ambiental.</h1>
-    <p>Projetos que equilibram paisagem, viabilidade e qualidade de vida.</p>
-  </div>
-</section>
+  <section class="hero">
+    <h1>Soluções inteligentes para o desenvolvimento sustentável</h1>
+    <p>Planejamento urbanístico pensado para o futuro das cidades</p>
+    <a href="#" class="btn-primary">NOSSOS PROJETOS</a>
+  </section>
 
-<section class="section" id="sobre">
-  <h2>Sobre a Escala</h2>
-  <p>
-    A Escala urbanismo desenvolve projetos urbanísticos de alto padrão,
-    integrando técnica, planejamento estratégico e valorização territorial.
-    Cada traçado é pensado para gerar impacto duradouro e coerência espacial.
-  </p>
-</section>
+  <section class="section">
+    <h2>Sobre nós</h2>
+    <p>
+      Somos especialistas em criar espaços urbanos que combinam estética, funcionalidade e sustentabilidade.
+      Nossa missão é transformar cidades em ambientes mais humanos, verdes e inovadores.
+    </p>
+  </section>
 
-<section class="section" id="servicos">
-  <h2>Atuação</h2>
-  <div class="services">
-    <div class="service-item">
-      <h3>Loteamentos</h3>
-      <p>Planejamento completo de parcelamento do solo com excelência técnica.</p>
+  <section class="about-grid">
+    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1500" alt="Projeto urbano">
+    <div class="about-text">
+      <h3>Sobre nós</h3>
+      <p>Combinando inovação e expertise, oferecemos soluções urbanísticas que incluem:</p>
+      <ul>
+        <li>Planejamento de bairros e comunidades</li>
+        <li>Desenvolvimento de espaços públicos</li>
+        <li>Projetos de paisagismo sustentável</li>
+        <li>Requalificação de áreas urbanas</li>
+      </ul>
     </div>
-    <div class="service-item">
-      <h3>Projetos Urbanísticos</h3>
-      <p>Concepção de bairros, áreas mistas e empreendimentos estruturados.</p>
-    </div>
-    <div class="service-item">
-      <h3>Consultoria</h3>
-      <p>Estudos de viabilidade e estratégias para valorização imobiliária.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta" id="contato">
-  <h2>Vamos desenvolver seu próximo projeto?</h2>
-  <button>Entrar em contato</button>
-</section>
-
-<footer>
-  © 2026 Escala urbanismo — Todos os direitos reservados
-</footer>
+  </section>
 
 </body>
 </html>
