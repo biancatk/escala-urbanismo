@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escala urbanismo</title>
+
+<style>
+:root {
+  --verde-principal: #6F7F3A;
+  --verde-escuro: #5A6930;
+  --verde-claro: #8F9E5A;
+  --grafite: #2B2B2B;
+  --offwhite: #F6F4EE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--offwhite);
+  color: var(--grafite);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--verde-principal);
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  font-weight: normal;
+  font-size: 16px;
+  display: block;
+  text-transform: lowercase;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  max-width: 700px;
+}
+
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  color: var(--verde-escuro);
+  margin-bottom: 20px;
+}
+
+.servicos {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.cta {
+  background-color: var(--verde-principal);
+  color: white;
+  padding: 60px 20px;
+}
+
+.cta button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: white;
+  border: none;
+  color: var(--verde-principal);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--verde-escuro);
+  color: white;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    ESCALA
+    <span>urbanismo</span>
+  </div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Planejamento urbano com precisão técnica, sensibilidade ambiental e visão de futuro.</h1>
+</section>
+
+<section class="section" id="sobre">
+  <h2>Sobre nós</h2>
+  <p>
+    A Escala urbanismo atua no desenvolvimento de projetos urbanísticos de alto padrão,
+    com foco em sustentabilidade, desenho técnico qualificado e soluções integradas.
+    Cada projeto é pensado para equilibrar técnica, paisagem e qualidade de vida.
+  </p>
+</section>
+
+<section class="section" id="servicos">
+  <h2>Serviços</h2>
+  <div class="servicos">
+    <div class="card">
+      <h3>Loteamentos</h3>
+      <p>Planejamento completo de parcelamento do solo com abordagem técnica e estratégica.</p>
+    </div>
+    <div class="card">
+      <h3>Projetos Urbanísticos</h3>
+      <p>Desenho urbano com integração ambiental, mobilidade e valorização imobiliária.</p>
+    </div>
+    <div class="card">
+      <h3>Consultoria Técnica</h3>
+      <p>Análises, estudos e viabilidade para empreendimentos urbanos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <h2>Vamos conversar sobre seu projeto?</h2>
+  <p>Entre em contato e descubra como podemos transformar seu terreno em um projeto de valor.</p>
+  <button>Falar no WhatsApp</button>
+</section>
+
+<footer>
+  © 2026 Escala urbanismo — Todos os direitos reservados
+</footer>
+
+</body>
+</html>
