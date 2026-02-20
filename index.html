@@ -5,60 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Escala urbanismo</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 :root {
-  --verde-principal: #6F7F3A;
+  --verde: #6F7F3A;
   --verde-escuro: #5A6930;
-  --verde-claro: #8F9E5A;
-  --grafite: #2B2B2B;
   --offwhite: #F6F4EE;
+  --grafite: #2B2B2B;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: var(--offwhite);
+  font-family: 'Inter', sans-serif;
+  background: var(--offwhite);
   color: var(--grafite);
-  line-height: 1.6;
 }
 
+/* HEADER */
+
 header {
-  background-color: var(--verde-principal);
-  padding: 20px 10%;
+  position: absolute;
+  width: 100%;
+  padding: 25px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
   color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  letter-spacing: 2px;
 }
 
 .logo span {
-  font-weight: normal;
-  font-size: 16px;
   display: block;
+  font-size: 14px;
+  letter-spacing: 3px;
   text-transform: lowercase;
 }
 
 nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 30px;
   text-decoration: none;
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
+/* HERO */
+
 .hero {
-  height: 80vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070') center/cover;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url("https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,60 +76,94 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 38px;
-  max-width: 700px;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  max-width: 800px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* SECTIONS */
+
 .section {
-  padding: 80px 10%;
+  padding: 120px 10%;
   text-align: center;
 }
 
 .section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 30px;
   color: var(--verde-escuro);
-  margin-bottom: 20px;
 }
 
-.servicos {
+.section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* SERVICES */
+
+.services {
   display: flex;
-  gap: 30px;
-  margin-top: 40px;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 60px;
+  margin-top: 60px;
+  flex-wrap: wrap;
 }
 
-.card {
-  background: white;
-  padding: 30px;
-  width: 280px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+.service-item {
+  max-width: 250px;
 }
+
+.service-item h3 {
+  margin-bottom: 15px;
+  color: var(--verde);
+}
+
+/* CTA */
 
 .cta {
-  background-color: var(--verde-principal);
+  background: var(--verde);
   color: white;
-  padding: 60px 20px;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
 }
 
 .cta button {
-  margin-top: 20px;
-  padding: 12px 30px;
+  margin-top: 30px;
+  padding: 14px 35px;
   background: white;
+  color: var(--verde);
   border: none;
-  color: var(--verde-principal);
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 5px;
+  letter-spacing: 1px;
 }
 
+/* FOOTER */
+
 footer {
-  padding: 30px;
-  text-align: center;
   background: var(--verde-escuro);
   color: white;
+  padding: 30px;
+  text-align: center;
   font-size: 14px;
 }
+
 </style>
 </head>
 
@@ -140,40 +182,42 @@ footer {
 </header>
 
 <section class="hero">
-  <h1>Planejamento urbano com precisão técnica, sensibilidade ambiental e visão de futuro.</h1>
+  <div>
+    <h1>Desenho urbano com precisão técnica e sensibilidade ambiental.</h1>
+    <p>Projetos que equilibram paisagem, viabilidade e qualidade de vida.</p>
+  </div>
 </section>
 
 <section class="section" id="sobre">
-  <h2>Sobre nós</h2>
+  <h2>Sobre a Escala</h2>
   <p>
-    A Escala urbanismo atua no desenvolvimento de projetos urbanísticos de alto padrão,
-    com foco em sustentabilidade, desenho técnico qualificado e soluções integradas.
-    Cada projeto é pensado para equilibrar técnica, paisagem e qualidade de vida.
+    A Escala urbanismo desenvolve projetos urbanísticos de alto padrão,
+    integrando técnica, planejamento estratégico e valorização territorial.
+    Cada traçado é pensado para gerar impacto duradouro e coerência espacial.
   </p>
 </section>
 
 <section class="section" id="servicos">
-  <h2>Serviços</h2>
-  <div class="servicos">
-    <div class="card">
+  <h2>Atuação</h2>
+  <div class="services">
+    <div class="service-item">
       <h3>Loteamentos</h3>
-      <p>Planejamento completo de parcelamento do solo com abordagem técnica e estratégica.</p>
+      <p>Planejamento completo de parcelamento do solo com excelência técnica.</p>
     </div>
-    <div class="card">
+    <div class="service-item">
       <h3>Projetos Urbanísticos</h3>
-      <p>Desenho urbano com integração ambiental, mobilidade e valorização imobiliária.</p>
+      <p>Concepção de bairros, áreas mistas e empreendimentos estruturados.</p>
     </div>
-    <div class="card">
-      <h3>Consultoria Técnica</h3>
-      <p>Análises, estudos e viabilidade para empreendimentos urbanos.</p>
+    <div class="service-item">
+      <h3>Consultoria</h3>
+      <p>Estudos de viabilidade e estratégias para valorização imobiliária.</p>
     </div>
   </div>
 </section>
 
 <section class="cta" id="contato">
-  <h2>Vamos conversar sobre seu projeto?</h2>
-  <p>Entre em contato e descubra como podemos transformar seu terreno em um projeto de valor.</p>
-  <button>Falar no WhatsApp</button>
+  <h2>Vamos desenvolver seu próximo projeto?</h2>
+  <button>Entrar em contato</button>
 </section>
 
 <footer>
